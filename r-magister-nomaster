@@ -1,16 +1,14 @@
-/*Warning: may not be the newest update*/
-/*user settings*/
+@import url("https://cdn.rawgit.com/Gamerein/Reins-Magister-theme/master/r-magister.css");
+
+/*user settings - can be changed*/
 :root{
-  --background: url("https://github.com/Gamerein/Reins-Magister-theme/raw/master/default-background.jpg"); /*replace with image url, must be direct!*/
-  /* these colors can be changed!*/
-  --button-color: #404040; 
-  --button-hover: #262626;
-  --border-color: #FFF;
+  --background: url("https://raw.githubusercontent.com/Gamerein/Reins-Magister-theme/master/backgrounds/backgroundBlue.jpg");
+  --button-color: #2780e6; 
+  --button-hover: #1e63b3;
+  --border-color: #4894ea;
 }
 /* goto https://www.w3schools.com/colors/colors_picker.asp to get color codes*/
 
-/*Warning: this version can be behind check https://github.com/Gamerein/Reins-Magister-theme/edit/master/r-magister for the latest update*/
- 
 /*new login*/
 
 .col-xs-12.col-sm-6.challenge-container {
@@ -153,11 +151,9 @@ li.ng-scope.asideTrigger.active a.ng-binding {
     color: #000 !important;
 }
 .menu {
-    position: absolute;
     top: 18px;
     border-radius: 5px;
     background-color: rgba(51, 51, 51, 0.0) !important;
-    z-index: 0;
 }
 .master-view {
     padding-left: 41px !important;
@@ -419,27 +415,28 @@ aside .tabs li:hover a {
 .endlink a:hover {
     animation: pulse 2s infinite;
 }
+
 /*Nav menu*/
 
 .menu > ul a {
     border: none;
 }
 .menu > ul > li {
-    border-radius: 50px;
     background-color: var(--button-color);
-    position: relative;
-    right: 40px;
-    width: 50px;
-    height: 50px;
 }
-.menu > ul > li > a {
+
+.menu > ul > li:first-child {
+    visibility: hidden;
+}
+
+/* .menu > ul > li > a {
     background: none;
     text-align: center;
     padding-left: 8px;
     padding-top: 7px;
     visibility: hidden;
-}
-.menu > ul > li:hover > a {
+} */
+/* .menu > ul > li:hover > a {
     visibility: visible;
 }
 .menu > ul > li > a:hover {
@@ -452,15 +449,17 @@ aside .tabs li:hover a {
     width: 60px !important;
     height: 60px !important;
     transition: 0.5s;
-}
+} */
+
 .menu li:after {
     position: relative;
     background: black;
     padding: 2px 5px 2px 5px;
     border-radius: 10px;
-    left: 65px;
-    bottom: 35px;
+    left: 52px;
+    bottom: 45px;
 }
+
 .menu > ul > li:nth-child(2):hover:after {
     content: "Vandaag"
 }
@@ -479,22 +478,19 @@ aside .tabs li:hover a {
 .menu > ul > li:nth-child(9):hover:after {
     content: "Leermiddelen";
 }
-.menu > ul > li > ul {
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 100px;
-}
-.menu > ul > li > ul > li > ul {
-    background: rgba(0, 0, 0, 0.7);
-    position: relative;
+
+.menu > ul > li  ul {
+    background: rgba(0, 0, 0, 0.9);
+/*     position: relative;
     left: 184px;
-    top: 44px;
+    top: 44px; */
 }
 .menu li.active,
 .menu li.highlight-menu.active {
     background-color: var(--button-hover) !important;
 }
 /*Nav menu end*/
+
 /* 18/10/2017 login fix*/
 
 .image-carrousel {
@@ -563,7 +559,118 @@ ul.sources.ng-scope li.ng-scope{
 #studiewijzer-container div.studiewijzer-list > ul > li > a > span {
   border-right:3px solid var(--button-color)
 }
-/*31/1/18*/
+/* end 31/1/18*/
+
+::-moz-selection {
+    background: var(--border-color);
+}
+
+::selection {
+    background: var(--border-color);
+}
+/*0/2/18*/
+
+#bronnen-container .bronnen-quota-label {
+  background: rgba(51, 51, 51, 0.1) !important;
+  color: #fff;
+  font-weight: 100;
+  font-size: 14px;
+}
+div#afsprakenLijst tr.ng-scope:nth-last-child(odd) {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+aside .tabs li.active a {
+  background-color: var(--button-color);
+}
+
+div#bestanden li:nth-last-child(odd){
+  background: rgba(255, 255, 255, 0.14)
+}
+
+.sources li ul {
+  background: transparent;
+}
+
+.rest-column.ng-isolate-scope, div#mappen {
+  background: rgba(51, 51, 51, 0.3);
+}
+
+.block b {
+    color: #fff;
+}
+
+.block h3 {
+  background: rgba(51, 51, 51, 0.1) !important;
+  color: #fff;
+}
+
+.column-container li.selected, .column-container li.checked, .sources li.selected > a{
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.sources li.selected > a:after, .sources li:hover > a:after {
+  color: var(--button-color);
+}
+
+.sources li:hover, .sources li.selected  {
+  border-top: 1px solid var(--border-color);
+}
+
+/*end 0/2/18*/
+
+.widget .list li, .endlink {
+  border-top: 1px solid var(--border-color) !important;
+}
+
+.block h3, .widget .list, #vandaag-container .grade-widget ul {
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* begin 23/3/20, corona times */
+.head-bar h1[data-ng-bind="datum"] {
+    text-transform: capitalize;
+}
+
+.view.ng-scope {
+    margin-left: 10px;
+}
+
+.fancy-select span {
+    background-color: var(--button-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* some dropdowns */
+.fancy-select span.k-dropdown-wrap.k-state-hover,
+.fancy-select span.k-dropdown-wrap.k-state-border-down,
+.fancy-select span.k-state-hover span,
+.fancy-select span.k-state-border-down span
+{
+    border: none !important;
+    background-color: var(--button-hover) !important;
+}
+
+label[data-ng-bind="selector.name"] {
+    color: white;
+}
+
+b {
+    font-weight: bold !important;
+}
+
+ul[role="listbox"] li {
+    background-color: var(--button-color) !important;
+}
+
+.block h3 span.icon-up-arrow, .block h3 span.icon-down-arrow {
+    color: #fff;
+}
+
+.k-dropdown .k-dropdown-wrap .k-select:after {
+    border-color: #fff rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) !important;
+}
 
 /* version checker*/
 
@@ -574,7 +681,7 @@ div.logo::after {
     font-size: 11px;
     width: 300px;
     box-sizing: border-box;
-    content: "Reins Magister theme: V1.3.7!";
+    content: "Reins Magister theme: V1.4.0!";
     font-weight: bold;
     padding: 5px;
     background-color: var(--button-hover);
