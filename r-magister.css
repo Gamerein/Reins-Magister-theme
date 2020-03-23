@@ -140,11 +140,9 @@ li.ng-scope.asideTrigger.active a.ng-binding {
     color: #000 !important;
 }
 .menu {
-    position: absolute;
     top: 18px;
     border-radius: 5px;
     background-color: rgba(51, 51, 51, 0.0) !important;
-    z-index: 0;
 }
 .master-view {
     padding-left: 41px !important;
@@ -406,27 +404,28 @@ aside .tabs li:hover a {
 .endlink a:hover {
     animation: pulse 2s infinite;
 }
+
 /*Nav menu*/
 
 .menu > ul a {
     border: none;
 }
 .menu > ul > li {
-    border-radius: 50px;
     background-color: var(--button-color);
-    position: relative;
-    right: 40px;
-    width: 50px;
-    height: 50px;
 }
-.menu > ul > li > a {
+
+.menu > ul > li:first-child {
+    visibility: hidden;
+}
+
+/* .menu > ul > li > a {
     background: none;
     text-align: center;
     padding-left: 8px;
     padding-top: 7px;
     visibility: hidden;
-}
-.menu > ul > li:hover > a {
+} */
+/* .menu > ul > li:hover > a {
     visibility: visible;
 }
 .menu > ul > li > a:hover {
@@ -439,15 +438,17 @@ aside .tabs li:hover a {
     width: 60px !important;
     height: 60px !important;
     transition: 0.5s;
-}
+} */
+
 .menu li:after {
     position: relative;
     background: black;
     padding: 2px 5px 2px 5px;
     border-radius: 10px;
-    left: 65px;
-    bottom: 35px;
+    left: 52px;
+    bottom: 45px;
 }
+
 .menu > ul > li:nth-child(2):hover:after {
     content: "Vandaag"
 }
@@ -466,22 +467,19 @@ aside .tabs li:hover a {
 .menu > ul > li:nth-child(9):hover:after {
     content: "Leermiddelen";
 }
-.menu > ul > li > ul {
-    background: rgba(0, 0, 0, 0.7);
-    position: absolute;
-    top: 100px;
-}
-.menu > ul > li > ul > li > ul {
-    background: rgba(0, 0, 0, 0.7);
-    position: relative;
+
+.menu > ul > li  ul {
+    background: rgba(0, 0, 0, 0.9);
+/*     position: relative;
     left: 184px;
-    top: 44px;
+    top: 44px; */
 }
 .menu li.active,
 .menu li.highlight-menu.active {
     background-color: var(--button-hover) !important;
 }
 /*Nav menu end*/
+
 /* 18/10/2017 login fix*/
 
 .image-carrousel {
@@ -616,6 +614,51 @@ div#bestanden li:nth-last-child(odd){
 
 .block h3, .widget .list, #vandaag-container .grade-widget ul {
   border-bottom: 1px solid var(--border-color);
+}
+
+/* begin 23/3/20, corona times */
+.head-bar h1[data-ng-bind="datum"] {
+    text-transform: capitalize;
+}
+
+.view.ng-scope {
+    margin-left: 10px;
+}
+
+.fancy-select span {
+    background-color: var(--button-color) !important;
+    color: white !important;
+    border: none !important;
+}
+
+/* some dropdowns */
+.fancy-select span.k-dropdown-wrap.k-state-hover,
+.fancy-select span.k-dropdown-wrap.k-state-border-down,
+.fancy-select span.k-state-hover span,
+.fancy-select span.k-state-border-down span
+{
+    border: none !important;
+    background-color: var(--button-hover) !important;
+}
+
+label[data-ng-bind="selector.name"] {
+    color: white;
+}
+
+b {
+    font-weight: bold !important;
+}
+
+ul[role="listbox"] li {
+    background-color: var(--button-color) !important;
+}
+
+.block h3 span.icon-up-arrow, .block h3 span.icon-down-arrow {
+    color: #fff;
+}
+
+.k-dropdown .k-dropdown-wrap .k-select:after {
+    border-color: #fff rgba(255,255,255,0) rgba(255,255,255,0) rgba(255,255,255,0) !important;
 }
 
 /* version checker*/
